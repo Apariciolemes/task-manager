@@ -7,8 +7,8 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { UserEntity } from '../users/user.entity';
-import { TaskStatus } from 'src/enums/tasks';
+import { UserEntity } from '../user/user.entity';
+import { TaskStatus } from './interfaces';
 
 @Entity()
 export class TasksEntity {
