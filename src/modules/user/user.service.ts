@@ -11,17 +11,11 @@ export class UserService {
     private readonly userRepository: Repository<UserEntity>,
   ) {}
 
-  async create({
-    name,
-    email,
-    password,
-    gender,
-  }: UserRequestDTO): Promise<UserEntity> {
+  async create({ name, email, password }: UserRequestDTO): Promise<UserEntity> {
     const user = this.userRepository.create({
       name,
       email,
       password,
-      gender,
     });
 
     return this.userRepository.save(user);
